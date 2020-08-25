@@ -1,4 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import styled from 'styled-components';
+
+const StyledCustomInput = styled.div`
+  
+`;
 
 export class CustomInput extends Component {
     checkit = (e) => {
@@ -8,10 +13,11 @@ export class CustomInput extends Component {
     }
     render() {
         return (
-            <div>
+            <StyledCustomInput>
+                <div style={{ display: 'flex', flexWrap: 'nowrap', border: '1px solid #333', }} id="dainput" onChange={this.props.customInputChange} contentEditable="true">
                 
-                <input style={{display:'flex',flexWrap:'nowrap'}} id="dainput" onChange={this.props.customInputChange} type="text" placeholder="search a task"/>
-            </div>
+                </div>
+            </StyledCustomInput>
         )
     }
 }
